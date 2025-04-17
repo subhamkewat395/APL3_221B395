@@ -1,0 +1,29 @@
+#ABOUT DOCKER
+Dockers allows run any application in any devices.
+Dockers convert data into a one unit.
+Docker image ( where the instruction is written).
+Docker image push into docker-hub.
+Docker image container is a instance of docker image.
+
+#COMMANDS
+1. docker pull hello_world
+2. docker run hello-world
+3. docker run-it ubuntu
+4. exit
+5. docker shop<id>
+
+
+#DOCKER NETWORK
+1. let two containers talk without hasle [mongo,mongo-expree]
+2. docker network ls
+3. docker network create mango-network
+4. docker network ls
+5. docker run -d -p 27017:27017 --name mongo --network mongo-network -e MONGO_INITDB_ROOT_USERNAME= admind -e MONGO_INITDB_ROOT_PASSWORD=admin mongo
+6. docker network inspect mongo-network 
+
+#RUNNING MONGO-EXPRESS
+
+1. docker run -d -p 8081:8081 --name mongo-express --network mongo-network -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD = adming -e ME_CONFIG_MONGODB_URL = "mongodb://admin:admin@mongo:27017" mongo-express
+
+
+2. mongo-express is an admin interface to convert to the mongoDB database
